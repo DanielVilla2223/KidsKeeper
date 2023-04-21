@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../pages/create_user.dart';
+
 class LoginBoy extends StatelessWidget {
   const LoginBoy({super.key});
   final bool enabled = true;
@@ -28,7 +30,7 @@ class LoginBoy extends StatelessWidget {
           const Text(
             'Iniciar sesion como niño',
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               color: Colors.purple,
               decorationThickness: 5,
@@ -65,7 +67,13 @@ class LoginBoy extends StatelessWidget {
                 padding: MaterialStateProperty.all<EdgeInsets>(
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
               ),
-              onPressed: onPressed,
+              onPressed: () {
+                // Navigator.pushNamed(context, '/create');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CreateUser()));
+              },
               child: const Text('Iniciar Sesion')),
           const Padding(
             padding: EdgeInsets.all(10),

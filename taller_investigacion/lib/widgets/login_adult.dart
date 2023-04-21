@@ -11,12 +11,12 @@ class LoginAdult extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment.bottomCenter,
-            end: Alignment.topCenter,
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xFFffdab9),
-              Color(0xFFf8f9fa),
+              const Color.fromARGB(255, 237, 178, 245).withOpacity(0.5),
+              const Color.fromARGB(255, 233, 60, 60).withOpacity(0.5),
             ],
           ),
           color: Colors.transparent,
@@ -30,7 +30,7 @@ class LoginAdult extends StatelessWidget {
           const Text(
             'Iniciar sesion como Adulto',
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               color: Colors.purple,
               decorationThickness: 5,

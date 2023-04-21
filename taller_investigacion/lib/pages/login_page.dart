@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:taller_investigacion/widgets/login_adult.dart';
 import 'package:taller_investigacion/widgets/login_boy.dart';
 
@@ -19,12 +18,8 @@ class _HomeState extends State<Home> {
     currentLogin = 0;
   }
 
-  final bool enabled = true;
-
   @override
   Widget build(BuildContext context) {
-    final VoidCallback? onPressed = enabled ? () {} : null;
-
     return Container(
       decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -39,7 +34,7 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(20),
+              bottom: Radius.circular(15),
             ),
           ),
           leading: IconButton(
@@ -91,10 +86,12 @@ class _HomeState extends State<Home> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       'Adulto',
-                      style: GoogleFonts.archivoNarrow(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
                     ),
                   ],
                 ),
@@ -124,10 +121,12 @@ class _HomeState extends State<Home> {
                     const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       'Niño',
-                      style: GoogleFonts.archivoNarrow(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
                     ),
                   ],
                 ),
