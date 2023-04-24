@@ -4,11 +4,9 @@ import '../pages/create_user.dart';
 
 class LoginBoy extends StatelessWidget {
   const LoginBoy({super.key});
-  final bool enabled = true;
 
   @override
   Widget build(BuildContext context) {
-    final VoidCallback? onPressed = enabled ? () {} : null;
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
@@ -43,6 +41,8 @@ class LoginBoy extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: const TextField(
                 decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white54,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
@@ -54,6 +54,8 @@ class LoginBoy extends StatelessWidget {
             child: const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white54,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),

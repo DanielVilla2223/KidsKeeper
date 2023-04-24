@@ -33,7 +33,7 @@ class _CreateUserState extends State<CreateUser> {
                 height: 50,
               ),
               ClipRRect(
-                borderRadius: BorderRadius.circular(200),
+                borderRadius: BorderRadius.circular(50),
                 child: Image.asset(
                   'assets/images/logo_child.png',
                   height: 180,
@@ -62,6 +62,8 @@ class _CreateUserState extends State<CreateUser> {
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: const TextField(
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white38,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
@@ -77,6 +79,8 @@ class _CreateUserState extends State<CreateUser> {
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: const TextField(
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white38,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
@@ -95,6 +99,8 @@ class _CreateUserState extends State<CreateUser> {
                   enableSuggestions: false,
                   autocorrect: false,
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white38,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),

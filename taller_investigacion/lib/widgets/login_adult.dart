@@ -19,7 +19,6 @@ class LoginAdult extends StatelessWidget {
               const Color.fromARGB(255, 233, 60, 60).withOpacity(0.5),
             ],
           ),
-          color: Colors.transparent,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(width: 2, color: Colors.purple.shade300)),
       child: Column(
@@ -43,6 +42,8 @@ class LoginAdult extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: const TextField(
                 decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white54,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
@@ -54,6 +55,8 @@ class LoginAdult extends StatelessWidget {
             child: const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white54,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
