@@ -70,7 +70,9 @@ class LoginAdult extends StatelessWidget {
                 padding: MaterialStateProperty.all<EdgeInsets>(
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
               ),
-              onPressed: onPressed,
+              onPressed: () {
+                Navigator.pushNamed(context, '/user');
+              },
               child: const Text('Iniciar Sesion')),
           const Padding(
             padding: EdgeInsets.all(10),
