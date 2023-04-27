@@ -25,9 +25,9 @@ class CustomColumn extends StatelessWidget {
           height: 130,
           width: 120,
         ),
-        Text(
+        const Text(
           'Nombre',
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.purple,
