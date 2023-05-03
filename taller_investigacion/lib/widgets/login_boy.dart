@@ -10,12 +10,12 @@ class LoginBoy extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomRight,
             colors: [
-              const Color.fromARGB(255, 237, 178, 245).withOpacity(0.5),
-              const Color.fromARGB(255, 233, 60, 60).withOpacity(0.5),
+               Color.fromARGB(255, 247, 221, 250),
+              Color.fromARGB(255, 254, 232, 232),
             ],
           ),
           borderRadius: BorderRadius.circular(20),
@@ -65,9 +65,9 @@ class LoginBoy extends StatelessWidget {
           FilledButton(
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all<Color>(Colors.purple),
+                    MaterialStateProperty.all<Color>(Colors.blue),
                 padding: MaterialStateProperty.all<EdgeInsets>(
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
+                    const EdgeInsets.symmetric(horizontal: 100, vertical: 20)),
               ),
               onPressed: () {
                 // Navigator.pushNamed(context, '/create');

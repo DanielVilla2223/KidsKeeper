@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:taller_investigacion/widgets/custom_column.dart';
 
 class UserHome extends StatefulWidget {
   const UserHome({super.key});

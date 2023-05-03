@@ -24,10 +24,10 @@ class _HomeState extends State<Home> {
       decoration: const BoxDecoration(
           gradient: LinearGradient(
         begin: Alignment.topCenter,
-        end: Alignment.bottomRight,
+        end: Alignment.bottomCenter,
         colors: [
-          Color.fromARGB(255, 226, 192, 190),
-          Color.fromARGB(255, 105, 23, 160),
+           Color.fromARGB(255, 255, 254, 254),
+          Color.fromARGB(255, 202, 202, 202),
         ],
       )),
       child: Scaffold(
@@ -45,101 +45,102 @@ class _HomeState extends State<Home> {
           ),
           title: const Text('Inicio de sesion'),
           centerTitle: true,
-          backgroundColor: Colors.pink.withOpacity(0.5),
+          backgroundColor: Colors.purple.shade300,
           elevation: 0,
         ),
         backgroundColor: Colors.transparent,
-        body: Column(
-          children: [
-            const SizedBox(
-              height: 50,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                const SizedBox(
-                  width: 2,
-                ),
-                Column(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          currentLogin = 0;
-                        });
-                      },
-                      child: Container(
-                          constraints: const BoxConstraints(maxWidth: 600),
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 10,
-                            horizontal: 10,
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(150),
-                              color: Colors.blue[200]),
-                          child: Image.asset(
-                            'assets/images/adulto.png',
-                            height: 150,
-                            width: 150,
-                          )),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'Adulto',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          currentLogin = 1;
-                        });
-                      },
-                      child: Container(
-                          constraints: const BoxConstraints(maxWidth: 600),
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 10,
-                            horizontal: 10,
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(150),
-                              color: Colors.green[200]),
-                          child: Image.asset(
-                            'assets/images/nino.png',
-                            height: 150,
-                            width: 150,
-                          )),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'Niño',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            AnimatedSwitcher(
-                duration: const Duration(milliseconds: 1000),
-                child:
-                    currentLogin == 0 ? const LoginAdult() : const LoginBoy()),
-          ],
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            currentLogin = 0;
+                          });
+                        },
+                        child: Container(
+                            constraints: const BoxConstraints(maxWidth: 600),
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 10,
+                              horizontal: 10,
+                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(150),
+                                color: Colors.blue[200]),
+                            child: Image.asset(
+                              'assets/images/adulto.png',
+                              height: 150,
+                              width: 150,
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text(
+                        'Adulto',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            currentLogin = 1;
+                          });
+                        },
+                        child: Container(
+                            constraints: const BoxConstraints(maxWidth: 600),
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 10,
+                              horizontal: 10,
+                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(150),
+                                color: Colors.green[200]),
+                            child: Image.asset(
+                              'assets/images/nino.png',
+                              height: 150,
+                              width: 150,
+                            )),
+                      ),
+                     const SizedBox(
+                       height: 10,
+                     ),
+                      const Text(
+                        'Niño',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10,),
+              AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 1000),
+                  child:
+                      currentLogin == 0 ? const LoginAdult() : const LoginBoy()),
+            ],
+          ),
         ),
       ),
     );
